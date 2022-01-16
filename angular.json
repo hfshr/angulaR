@@ -11,23 +11,24 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "srcjs",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-ng",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "outputPath": "inst/app/www/",
+            "baseHref": "www/",
+            "index": "srcjs/index.html",
+            "main": "srcjs/main.ts",
+            "polyfills": "srcjs/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "srcjs/favicon.ico",
+              "srcjs/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "srcjs/styles.css"
             ],
             "scripts": []
           },
@@ -47,8 +48,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "srcjs/environments/environment.ts",
+                  "with": "srcjs/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -85,16 +86,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
+            "main": "srcjs/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "srcjs/favicon.ico",
+              "srcjs/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "srcjs/styles.css"
             ],
             "scripts": []
           }
